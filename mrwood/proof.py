@@ -25,7 +25,7 @@ def get_proof():
         "aV": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
         "nP": "Win32",
         "uA": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
-        "nL": "en-US", "cE": True, "oS": True, "sW": 1680, "sH": 1050, "sD": 24, "wW": 178, "wH": 939,
+        "nL": "en-US", "cE": True, "oS": True, "sW": random.randint(1000, 9999), "sH": random.randint(1000, 9999), "sD": random.randint(1000, 9999), "wW": random.randint(1000, 9999), "wH": random.randint(1000, 9999),
         "cU": "https://vantage.rip/register", "cP": "/register", "cH": "vantage.rip", "cT": "", "cR": "https:",
         "cO": "vantage.rip"
     }
