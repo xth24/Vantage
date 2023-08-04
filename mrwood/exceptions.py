@@ -1,0 +1,2 @@
+class WoodHTTPException(Exception):
+    pass
