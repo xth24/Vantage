@@ -48,3 +48,11 @@ class MrWood:
         if data.status_code != 200:
             raise exceptions.WoodHTTPException(f"Failed to register account: {data.json()['msg']}")
 
+    def send_reset_password(self):
+        self.session.post(
+            'https://api.vantage.rip/auth/send-reset-password',
+            json={
+                "email": self.email,
+                "captcha": proof.get_proof()
+            }
+        )

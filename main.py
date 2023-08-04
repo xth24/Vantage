@@ -12,6 +12,10 @@ def create_account():
 
     print(f"Created: {line}")
 
+    wood.send_reset_password()
+
+    print(f"Send password reset: {line}")
+
     with open("accounts.txt", "a+") as f:
         f.write(line + "\n")
 
