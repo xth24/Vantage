@@ -16,7 +16,7 @@ def create_account():
         f.write(line + "\n")
 
 
-threadpool = ThreadPoolExecutor(50)
+threadpool = ThreadPoolExecutor(int(input("Thread Pool Size: ")))
 
 for i in range(int(input("Accounts: "))):
     threadpool.submit(create_account)
