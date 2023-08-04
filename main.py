@@ -4,20 +4,27 @@ import mrwood
 
 
 def create_account():
-    wood = mrwood.MrWood()
+    try:
+        wood = mrwood.MrWood()
 
-    wood.create_account()
+        wood.create_account()
 
-    line = f"{wood.email}:{wood.password}"
+        line = f"{wood.email}:{wood.password}"
 
-    print(f"Created: {line}")
+        print(f"Created: {line}")
 
-    wood.send_reset_password()
+        wood.send_reset_password()
 
-    print(f"Send password reset: {line}")
+        print(f"Sent password reset: {line}")
 
-    with open("accounts.txt", "a+") as f:
-        f.write(line + "\n")
+        wood.login()
+
+        print(f"Sent login request: {line}")
+
+        with open("accounts.txt", "a+") as f:
+            f.write(line + "\n")
+    except Exception as e:
+        print(f"error {e}")
 
 
 threadpool = ThreadPoolExecutor(int(input("Thread Pool Size: ")))
